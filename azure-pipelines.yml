@@ -39,3 +39,10 @@ stages:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
         ArtifactName: 'drop'
         publishLocation: 'Container'
+
+- stage: DeployAzureResources
+  jobs: 
+  - job: DeployAzureResources
+    pool: 
+      vmImage: 'windows-latest'
+    steps:
